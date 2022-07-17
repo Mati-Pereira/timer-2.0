@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+:root{
+  --bg-sounds: #E1E1E6;
+  --bg-sounds-hover: #02799D;
+  --bg-primary: #fff;
+  --font-primary: 'Roboto', sans-serif;
+  --text-color: #323238;
+  --text-sounds-hover: #fff;
+}
+
+body{
+  background-color: var(--bg-primary);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  gap: 5rem;
+}
+
+.timer{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.clock{
+  display: inline-block;
+  text-align: center;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 7rem;
+  letter-spacing: -5px;
+}
+
+.controls{
+  display: flex;
+  gap: 2.4rem;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.controls .playButton,
+.controls .stopButton,
+.controls .plusButton,
+.controls .minusButton{
+  transition: .25s;
+  background-color: transparent;
+}
+
+.controls .playButton:active,
+.controls .stopButton:active,
+.controls .plusButton:active,
+.controls .minusButton:active{
+  transform: scale(.85);
+  transition: .25s;
+}
+
+
+/* esquerda */
+
+.sounds{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.sounds img{
+  background-color: var(--bg-sounds);
+  padding: 3rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: .25s;
+
+}
+
+.sounds .florestaSound:hover,
+.sounds .chuvaSound:hover,
+.sounds .cafeteriaSound:hover,
+.sounds .lareiraSound:hover
+
+{
+  animation: tempo 1s;
+}
+.sounds .florestaHover:hover,
+.sounds .chuvaHover:hover,
+.sounds .cafeteriaHover:hover,
+.sounds .lareiraHover:hover
+
+{
+  animation: tempoInvertido 1s;
+  background-color: var(--bg-sounds-hover);
+}
+
+.sounds .florestaHover:active,
+.sounds .chuvaHover:active,
+.sounds .cafeteriaHover:active,
+.sounds .lareiraHover:active
+
+{
+  font-size: 1rem;
+  transform: scale(.9);
+  transition: .25s;
+}
+
+
+
+/* criados e usados */
+
+.hidden{
+  display: none;
+}
+
+@keyframes tempo {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes tempoInvertido {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 700px){
+  .container{
+  display: flex;
+  flex-direction: column;
+}}
+
+
+/* dark mode */
+
+#dark-mode-input {
+  display: none;
+}
+
+#dark-mode-input:checked ~ .container {
+  background: #444;
+  color: #fff; 
+}
+
+#dark-mode-input:checked ~ .container .playButton, 
+#dark-mode-input:checked ~ .container .stopButton, 
+#dark-mode-input:checked ~ .container .plusButton, 
+#dark-mode-input:checked ~ .container .minusButton{
+  filter: brightness(0) invert(1);
+} 
+
+
+.dark-mode-toggler {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: var(--text-sounds-hover);
+  border: 2px solid #333;
+  border-radius: 20px;
+  top: 10px;
+  right: 10px;
+  transition: all 300ms ease-in-out;
+}
+
+.dark-mode-toggler div {
+  width: 12px;
+  height: 12px;
+  background: var(--bg-sounds-hover);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 300ms ease-in-out;
+}
+
+#dark-mode-input:checked ~ .dark-mode-toggler {
+  background: var(--bg-sounds-hover);
+}
+
+#dark-mode-input:checked ~ .dark-mode-toggler div {
+  background: var(--text-sounds-hover);
+  left: 21px;
+}
