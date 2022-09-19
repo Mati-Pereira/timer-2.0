@@ -11,7 +11,7 @@ This application is a counter, together with relaxing sounds, perfect for prolon
 
 ## Demo
 
-[Demo](https://frontend-c7pofbs65-mati-pereira.vercel.app/)
+[Demo](https://timer-2-0.vercel.app/)
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://portnext-lx2gofq4f-mati-pereira.vercel.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-rodrigues-pereira/)
