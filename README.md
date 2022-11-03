@@ -1,7 +1,7 @@
 
 # Timer 2.0
 
-This application is a counter, together with relaxing sounds, perfect for prolonged study. It also comes with dark mode.
+Esta aplicação é um contador, junto com sons relaxantes, perfeito para o estudo prolongado. Esta vem também com o modo escuro.
 
 
 ## Authors
