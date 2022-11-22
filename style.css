@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   border: none;
@@ -11,20 +11,20 @@
   -ms-box-sizing: border-box;
 }
 
-:root{
-  --bg-sounds: #E1E1E6;
-  --bg-sounds-hover: #02799D;
+:root {
+  --bg-sounds: #e1e1e6;
+  --bg-sounds-hover: #02799d;
   --bg-primary: #fff;
-  --font-primary: 'Roboto', sans-serif;
+  --font-primary: "Roboto", sans-serif;
   --text-color: #323238;
   --text-sounds-hover: #fff;
 }
 
-body{
+body {
   background-color: var(--bg-primary);
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,13 +33,13 @@ body{
   gap: 5rem;
 }
 
-.timer{
+.timer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.clock{
+.clock {
   display: inline-block;
   text-align: center;
   font-family: var(--font-primary);
@@ -48,62 +48,56 @@ body{
   letter-spacing: -5px;
 }
 
-.controls{
+.controls {
   display: flex;
   gap: 2.4rem;
   cursor: pointer;
-  transition: .25s;
+  transition: 0.25s;
 }
 
 .controls .playButton,
 .controls .stopButton,
 .controls .plusButton,
-.controls .minusButton{
-  transition: .25s;
+.controls .minusButton {
+  transition: 0.25s;
   background-color: transparent;
 }
 
 .controls .playButton:active,
 .controls .stopButton:active,
 .controls .plusButton:active,
-.controls .minusButton:active{
-  transform: scale(.85);
-  transition: .25s;
+.controls .minusButton:active {
+  transform: scale(0.85);
+  transition: 0.25s;
 }
-
 
 /* esquerda */
 
-.sounds{
+.sounds {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-.sounds img{
+.sounds img {
   background-color: var(--bg-sounds);
   padding: 3rem;
   width: 10rem;
   height: 10rem;
   border-radius: 1rem;
   cursor: pointer;
-  transition: .25s;
-
+  transition: 0.25s;
 }
 
 .sounds .florestaSound:hover,
 .sounds .chuvaSound:hover,
 .sounds .cafeteriaSound:hover,
-.sounds .lareiraSound:hover
-
-{
+.sounds .lareiraSound:hover {
   animation: tempo 1s;
 }
 .sounds .florestaHover:hover,
 .sounds .chuvaHover:hover,
 .sounds .cafeteriaHover:hover,
-.sounds .lareiraHover:hover
-
-{
+.sounds .lareiraHover:hover {
   animation: tempoInvertido 1s;
   background-color: var(--bg-sounds-hover);
 }
@@ -111,19 +105,15 @@ body{
 .sounds .florestaHover:active,
 .sounds .chuvaHover:active,
 .sounds .cafeteriaHover:active,
-.sounds .lareiraHover:active
-
-{
+.sounds .lareiraHover:active {
   font-size: 1rem;
-  transform: scale(.9);
-  transition: .25s;
+  transform: scale(0.9);
+  transition: 0.25s;
 }
-
-
 
 /* criados e usados */
 
-.hidden{
+.hidden {
   display: none;
 }
 
@@ -145,13 +135,12 @@ body{
   }
 }
 
-
-@media (max-width: 700px){
-  .container{
-  display: flex;
-  flex-direction: column;
-}}
-
+@media (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 /* dark mode */
 
@@ -161,16 +150,15 @@ body{
 
 #dark-mode-input:checked ~ .container {
   background: #444;
-  color: #fff; 
+  color: #fff;
 }
 
-#dark-mode-input:checked ~ .container .playButton, 
-#dark-mode-input:checked ~ .container .stopButton, 
-#dark-mode-input:checked ~ .container .plusButton, 
-#dark-mode-input:checked ~ .container .minusButton{
+#dark-mode-input:checked ~ .container .playButton,
+#dark-mode-input:checked ~ .container .stopButton,
+#dark-mode-input:checked ~ .container .plusButton,
+#dark-mode-input:checked ~ .container .minusButton {
   filter: brightness(0) invert(1);
-} 
-
+}
 
 .dark-mode-toggler {
   position: absolute;
